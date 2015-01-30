@@ -11,7 +11,7 @@ The encryption can be represented using modular arithmetic by first transforming
 
 ![](http://upload.wikimedia.org/math/b/b/b/bbb819c72cda43180d98e6ade5cadb04.png)
 
-*Do not* encrypt any non-alphabetical characters!
+`Do not` encrypt any non-alphabetical characters!
 
 Example:
 
