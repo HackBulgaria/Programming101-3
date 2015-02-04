@@ -24,6 +24,6 @@ Example:
 "cde"
 >>> caesar_encrypt("aaa", 7)
 "hhh"
->>> caesar_encrypt("xwz", 1)
-"wza"
+>>> caesar_encrypt("xyz", 1)
+"yza"
 ```
