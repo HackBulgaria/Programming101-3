@@ -1,7 +1,7 @@
 #Fill tetrahedron with water.
 You have to implement a function with the following signature: `fill_tetrahedron(num)`.
 - The argument num is of type integer.
-- The function should return an intager
+- The function should return a float (double).
 
 ![Regular tetrahedron](http://upload.wikimedia.org/wikipedia/commons/7/70/Tetrahedron.gif)
 
