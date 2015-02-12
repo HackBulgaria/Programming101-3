@@ -35,3 +35,7 @@ We are going to work with a console & text editor a lot. Linux is a mandatory op
 * Solving team problems, using Git, Python's OOP and TDD
 * Introducing to basic security concepts - SQL injections, hash functions & password hashing, bruteforce protection.
 * Introducing Python's `SQLAlchemy` ORM - working with more complex database problems.
+* Introducing basic web programming concepts - HTTP, HTML * CSS.
+* Introducing the `Flask` framework for web development - implementing a web application that works with database.
+* Learning how to deploy our web application - http servers & configuration.
+* Intoducing to multithreading and networking with Python.
