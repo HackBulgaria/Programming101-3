@@ -285,7 +285,7 @@ def char_histogram(string):
 >>> char_histogram("Python!")
 { 'P': 1, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 1, '!': 1 }
 >>> char_histogram("AAAAaaa!!!")
-{ 'A': 3, 'a': 3, '!": 3 }
+{ 'A': 4, 'a': 3, '!": 3 }
 ```
 
 ## Palindrome Score
