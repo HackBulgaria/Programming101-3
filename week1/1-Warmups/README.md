@@ -43,13 +43,13 @@ def fibonacci(n):
 ### Test examples
 
 ```python
->>> nth_fibonacci(1)
+>>> fibonacci(1)
 [1]
->>> nth_fibonacci(2)
+>>> fibonacci(2)
 [1, 1]
->>> nth_fibonacci(3)
+>>> fibonacci(3)
 [1, 1, 2]
->>> nth_fibonacci(10)
+>>> fibonacci(10)
 [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 ```
 
