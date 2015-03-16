@@ -112,7 +112,7 @@ def fact_digits(n):
 >>> fact_digits(145)
 145
 >>> fact_digits(999)
-1088641
+1088640
 ```
 
 ## Palindrome
