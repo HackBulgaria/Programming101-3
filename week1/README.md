@@ -5,3 +5,4 @@ The main idea behind the problems for week1 is to get familiar with Python as a 
 Here is an index of the materials you have to check for week0:
 
 1. [How to test & run your python code](materials/how_to_run_your_python_code.md)
+2. [Basic Python data structres](materials/python_data_structures.md)
