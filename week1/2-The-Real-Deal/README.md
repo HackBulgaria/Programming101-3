@@ -1,4 +1,4 @@
-# След като сме загрели, още задачи
+# After we have done our warmpup problems
 
 ## Sum all divisors of an integer
 
