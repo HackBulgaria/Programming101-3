@@ -1,4 +1,4 @@
-# After we have done our warmpup problems
+# After we have done our warmup problems
 
 ## Sum all divisors of an integer
 
