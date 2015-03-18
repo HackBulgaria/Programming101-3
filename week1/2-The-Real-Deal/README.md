@@ -257,7 +257,7 @@ You are givn a `NxM` matrix of integer numbers.
 
 We can drop a bomb at any place in the matrix, which has the following effect:
 
-* All of the 8 neighbours of the target are reduced by the value of the target.
+* All of the **3 to 8 neighbours** (depending on where you hit!) of the target are reduced by the value of the target.
 * Numbers can be reduced only to 0 - they cannot go to negative.
 
 For example, if we have the following matrix:
