@@ -68,7 +68,7 @@ if 'Jay-Z' in rappers:
 print(rappers) # {'Jay-Z', 'Eminem'}
 ```
 
-**Sets are perfect for searching elements with `in`** since they can find them in `O(lgN)` time, in comparison to `O(n)` for lists.`
+**Sets are perfect for searching elements with `in`** since they can find them in `O(lgN)` time, in comparison to `O(n)` for lists.
 
 
 You can see more sets usage [here](https://docs.python.org/3.4/tutorial/datastructures.html#sets).
