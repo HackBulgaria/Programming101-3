@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 def sum_of_divisors(n):
     return sum([x for x in range(1, n + 1) if n % x == 0])
 
@@ -46,6 +44,23 @@ def to_number(digits):
     return result
 
 
+def is_number_balanced(n):
+    numbs = to_digits(n)
+    half = len(numbs) // 2
+
+    left_numbs = numbs[0:half]
+    if len(numbs) % 2 == 0:
+        right_numbs = numbs[half:]
+    else:
+        right_numbs = numbs[half + 1:]
+
+    return sum(left_numbs) == sum(right_numbs)
+
+
+def count_substrings(haystack, needle):
+    return haystack.count(needle)
+
+
 def zero_insert(n):
     result = []
     digits = to_digits(n)
@@ -69,7 +84,6 @@ def zero_insert(n):
     return to_number(result)
 
 
-
 def sum_matrix(matr):
     result = 0
 
@@ -82,48 +96,3 @@ def sum_matrix(matr):
 def sum_matrix2(matr):
     # Using list comprehensions
     return sum([sum(row) for row in matr])
-
-def is_number_balanced(n):
-    numbs = [int(x) for x in str(n)]
-    half = len(numbs) // 2
-    left_numbs = numbs[0:half]
-    if len(numbs) % 2 == 0: right_numbs = numbs[half:]
-    else: right_numbs = numbs[half + 1:]
-
-    left_sum = sum(left_numbs)
-    right_sum = sum(right_numbs)
-
-    if left_sum == right_sum:
-        return True
-    return False
-
-def count_substrings(haystack, needle):
-    return haystack.count(needle)
-
-def find_neighbours(matrix,row,i,j):
-    neighbours = []
-    indexes = [-1, 0, 1]
-    for r in indexes:
-        for c in indexes:
-            if i+r >= 0 and i+r <= len(matrix) - 1 and j+c >= 0 and j+c <= len(row) - 1:
-                if not (r == 0 and c == 0):
-                    neighbours.append([i+r, j+c])
-    return neighbours
-
-def bomb_matrix(matrix,row,i,j):
-    bombed_matrix = deepcopy(matrix)
-    for element in find_neighbours(matrix, row, i,j):
-        if matrix[element[0]][element[1]] - matrix[i][j] >= 0:
-            bombed_matrix[element[0]][element[1]] = matrix[element[0]][element[1]] - matrix[i][j]
-        else:
-            bombed_matrix[element[0]][element[1]] = 0
-    return bombed_matrix
-
-def matrix_bombing_plan(matrix):
-    result = {}
-    for row in matrix:
-        i = matrix.index(row)
-        for coll in row:
-            j = row.index(coll)
-            result[(i,j)] = sum_matrix(bomb_matrix(matrix,row,i,j))
-    return result
