@@ -43,7 +43,7 @@ def palindrome(obj):
 
 
 def count_digits(n):
-    sum([1 for x in to_digits(n)])
+    return sum([1 for x in to_digits(n)])
 
 
 def to_number(digits):
