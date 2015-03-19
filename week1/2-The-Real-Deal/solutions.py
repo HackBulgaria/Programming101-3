@@ -44,6 +44,23 @@ def to_number(digits):
     return result
 
 
+def is_number_balanced(n):
+    numbs = to_digits(n)
+    half = len(numbs) // 2
+
+    left_numbs = numbs[0:half]
+    if len(numbs) % 2 == 0:
+        right_numbs = numbs[half:]
+    else:
+        right_numbs = numbs[half + 1:]
+
+    return sum(left_numbs) == sum(right_numbs)
+
+
+def count_substrings(haystack, needle):
+    return haystack.count(needle)
+
+
 def zero_insert(n):
     result = []
     digits = to_digits(n)
@@ -65,7 +82,6 @@ def zero_insert(n):
     result.append(digits[start])
 
     return to_number(result)
-
 
 
 def sum_matrix(matr):
