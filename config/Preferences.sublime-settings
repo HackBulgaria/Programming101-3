@@ -3,6 +3,9 @@
     "highlight_line": true,
     "highlight_modified_tabs": true,
     "tab_size": 4,
+    "ignored_packages":[
+      "Vintage"
+    ],
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
     "ensure_newline_at_eof_on_save": true,
