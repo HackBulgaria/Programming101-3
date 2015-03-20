@@ -94,3 +94,32 @@ def prime_factorization(n):
         current_prime = next_prime(current_prime)
 
     return result
+
+
+def take_same(items):
+    first = items[0]
+    n = len(items)
+    index = 1
+    result = [first]
+
+    while index < n and items[index] == first:
+        result.append(items[index])
+        index += 1
+
+    return result
+
+
+def group(items):
+    result = []
+
+    while len(items) != 0:
+        current_group = take_same(items)
+        result.append(current_group)
+
+        items = items[len(current_group):]
+
+    return result
+
+
+def max_consecutive(items):
+    return max([len(g) for g in group(items)])
