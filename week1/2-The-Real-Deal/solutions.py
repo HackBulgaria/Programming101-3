@@ -1,3 +1,7 @@
+import copy
+import pprint
+
+
 def sum_of_divisors(n):
     return sum([x for x in range(1, n + 1) if n % x == 0])
 
@@ -96,3 +100,55 @@ def sum_matrix(matr):
 def sum_matrix2(matr):
     # Using list comprehensions
     return sum([sum(row) for row in matr])
+
+
+
+# We are centered at 4.
+# How to move to get to 4's neighbors
+# 1      2     3
+# 8     >4<    7
+# 9      5     6
+NEIGHBORS = [
+    (-1, -1), (0, -1), (1, -1),  # Get to 1, 2 and 3
+    (-1, 0), (1, 0),  # Get to 8 and 7
+    (-1, 1), (0, 1), (1, 1)]  # Get to 9, 5 and 6
+
+
+def within_bounds(m, at):
+    if at[0] < 0 or at[0] >= len(m):
+        return False
+
+    if at[1] < 0 or at[1] >= len(m[0]):
+        return False
+
+    return True
+
+
+def bomb(m, at):
+    if not within_bounds(m, at):
+        return m
+
+    target_value = m[at[0]][at[1]]
+    dx, dy = 0, 1
+
+    for position in NEIGHBORS:
+        position = (at[dx] + position[dx], at[dy] + position[dy])
+
+        if within_bounds(m, position):
+            position_value = m[position[dx]][position[dy]]
+            # This min() is not to go less than zero
+            m[position[dx]][position[dy]] -= min(target_value, position_value)
+
+    return m
+
+
+def matrix_bombing_plan(m):
+    result = {}
+
+    for i in range(0, len(m)):
+        for j in range(0, len(m[0])):
+            bombed = bomb(copy.deepcopy(m), (i, j))
+            result[(i, j)] = sum_matrix(bombed)
+
+    return result
+
