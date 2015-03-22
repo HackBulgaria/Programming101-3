@@ -251,6 +251,12 @@ def magic_square(matrix):
         s.append(sum([row[i] for row in matrix]))
 # Sum of diagonals:
     s.append(sum([matrix[i][i] for i in range(len(matrix))]))
-    s.append(sum([matrix[i][i] for i in range(len(matrix) - 1, -1, -1)]))
+
+    i = 0
+    result = 0
+    for j in range(len(matrix) - 1, -1, -1):
+        result += matrix[i][j]
+        i += 1
+    s.append(result)
 
     return all([s[0] == s[i] for i in range(len(s))])
