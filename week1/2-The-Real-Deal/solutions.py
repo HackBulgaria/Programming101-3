@@ -152,3 +152,13 @@ def matrix_bombing_plan(m):
 
     return result
 
+
+def main():
+    m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    result = matrix_bombing_plan(m)
+
+    pp = pprint.PrettyPrinter()
+    pp.pprint(result)
+
+if __name__ == '__main__':
+    main()
