@@ -7,3 +7,5 @@
 3. [Какво представлява Git? В обяснения и картинки](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 4. [Опитайте Git. Интерактивен гид, който ще ви покаже основните git команди.](https://try.github.io/levels/1/challenges/1)
 5. [Работа с файлове в Python](https://docs.python.org/3.4/tutorial/inputoutput.html#reading-and-writing-files)
+6. [Прост пример за работа с файлове в Python](working_with_files.md)
+7. [Как нашата програма да чете аргументи?](program_arguments.md)
