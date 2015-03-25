@@ -37,7 +37,7 @@ You should try it.
 
 This is the result:
 ```
-$ python3 cat.py file.txt
+$ python3.4 cat.py file.txt
 Python is an awesome language!
 You should try it.
 ```
@@ -82,7 +82,7 @@ Also, you can use Python at a lot of different places!
 
 This is the result:
 ```
-$ python3 cat2.py file1.txt file2.txt
+$ python3.4 cat2.py file1.txt file2.txt
 Python is an awesome language!
 You should try it.
 
@@ -120,7 +120,7 @@ if __name__ == '__main__':
 ### Examples
 
 ```
-$ python3 generate_numbers.py numbers.txt 100
+$ python3.4 generate_numbers.py numbers.txt 100
 $ cat numbers.txt
 612 453 555 922 120 840 173 98 994 461 392 739 982 598 610 205 13 604 304 591 830 313 534 47 945 26 975 338 204 51 299 611 699 712 544 868 2 80 472 101 396 744 950 561 378 553 777 248 53 900 209 817 546 12 920 219 38 483 176 566 719 196 240 638 812 630 315 209 774 768 505 268 358 39 783 78 94 293 187 661 743 89 768 549 106 837 687 992 422 30 897 174 844 148 88 472 808 598 341 749
 ```
@@ -136,7 +136,7 @@ The script should print the sum of all integers in that file.
 If we use the generated file from Problem 3:
 
 ```
-$ python3 sum_numbers.py numbers.txt
+$ python3.4 sum_numbers.py numbers.txt
 47372
 ```
 
