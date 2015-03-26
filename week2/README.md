@@ -9,4 +9,5 @@
 5. [Working with the File System with Python.](https://docs.python.org/3.4/tutorial/inputoutput.html#reading-and-writing-files)
 6. [Examples of Python API for working with the File System.](materials/working_with_files.md)
 7. [How to read arguments for our programs? sys.argv](materials/program_arguments.md)
-8.
+8. [Python & OOP, part 1, from the Python-FMI course 2015](http://fmi.py-bg.net/lectures/03-oop#1)
+9. [Python & OOP, part 2, from the Python-FMI course 2015](http://fmi.py-bg.net/lectures/04-oop-2#1)
