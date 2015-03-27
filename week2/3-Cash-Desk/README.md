@@ -44,7 +44,7 @@ money_holder[a] = 1 # We have one 10% bill
 if c in money_holder:
     money_holder[c] += 1
 
-print(c) # { "A 10$ bill": 2 }
+print(money_holder) # { "A 10$ bill": 2 }
 ```
 
 
