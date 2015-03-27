@@ -39,5 +39,22 @@ class Panda:
         return self.name == other.name and self.weight == other.weight
 
 
+class PandaZoo:
+    def __init__(self, pandas):
+        self.pandas = pandas
+
+    def __len__(self):
+        return len(self.pandas)
+
+    def __getitem__(self, index):
+        return self.pandas[index]
+
 ivo = Panda("Ivo")
-print(type(ivo))
+rado = Panda("Rado")
+maria = Panda("Maria")
+
+zoo = PandaZoo([ivo, rado, maria])
+print(len(zoo))
+
+for panda in zoo:
+    print(panda)
