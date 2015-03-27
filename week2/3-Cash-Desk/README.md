@@ -56,7 +56,7 @@ The class takes a list of `Bills` as the single constructor argument.
 
 The class should have the following methods:
 
-* `__len__(self)__` - returns the number of `Bills` in the batch
+* `__len__(self)` - returns the number of `Bills` in the batch
 * `total(self)` - returns the total amount of all `Bills` in the batch
 
 We should be able to iterate the `BatchBill` class with a for-loop.
