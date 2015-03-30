@@ -15,6 +15,7 @@ Our `BankAccount` will have the following methods:
 * `__str__` should print: `"Bank account for {name} with balance of {amount}{currency}"`
 * `__int__` should return the balance of the `BankAccount`
 * `transfer_to(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
+* `history()` - returns a list of strings, that represent the history of the bank account. Check examples below for more information.
 
 ```python
 >>> account = BankAccount("Rado", 0, "$")
