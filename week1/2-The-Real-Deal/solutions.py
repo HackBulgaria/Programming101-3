@@ -102,7 +102,6 @@ def sum_matrix2(matr):
     return sum([sum(row) for row in matr])
 
 
-
 # We are centered at 4.
 # How to move to get to 4's neighbors
 # 1      2     3
@@ -162,3 +161,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

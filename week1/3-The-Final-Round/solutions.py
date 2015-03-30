@@ -123,3 +123,35 @@ def group(items):
 
 def max_consecutive(items):
     return max([len(g) for g in group(items)])
+
+
+def reduce_file_path(path):
+    result = []
+    parts = [part for part in path.split("/") if part not in [".", ""]]
+
+    while len(parts) != 0:
+        part = parts.pop()
+
+        if part == "..":
+            if len(parts) != 0:
+                parts.pop()
+        else:
+            result.insert(0, part)
+
+    return "/" + "/".join(result)
+
+
+def main():
+    print(reduce_file_path("/"))
+    print(reduce_file_path("/srv/../"))
+    print(reduce_file_path("/srv/www/htdocs/wtf/"))
+    print(reduce_file_path("/srv/www/htdocs/wtf"))
+    print(reduce_file_path("/srv/./././././"))
+    print(reduce_file_path("/etc//wtf/"))
+    print(reduce_file_path("/etc/../etc/../etc/../"))
+    print(reduce_file_path("/../"))
+
+
+if __name__ == '__main__':
+    main()
+
