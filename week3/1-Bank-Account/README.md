@@ -14,7 +14,7 @@ Our `BankAccount` will have the following methods:
 * `withdraw(amount)` - takes `amount` money from the account. Returns `True` if it was successful. Otherwise, `False`
 * `__str__` should print: `"Bank account for {name} with balance of {amount}{currency}"`
 * `__int__` should return the balance of the `BankAccount`
-* `transferTo(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
+* `transfer_to(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
 
 ```python
 >>> account = BankAccount("Rado", 0, "$")
@@ -48,7 +48,7 @@ Also, we should be able to transfer money from one account to another:
 ```python
 >>> rado = BankAccount("Rado", 1000, "BGN")
 >>> ivo = BankAccount("Ivo", 0, "BGN")
->>> rado.transferTo(ivo, 500)
+>>> rado.transfer_to(ivo, 500)
 True
 >>> rado.balance()
 500
