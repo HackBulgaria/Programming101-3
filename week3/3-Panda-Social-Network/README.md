@@ -36,6 +36,7 @@ Implement a class, called `PandaSocialNetwork`, which has the following public m
 * `friends_of(panda)` - returns a list of `Panda` with the friends of the given `panda`. Returns `False` if the `panda` is not a member of the network.
 * `connection_level(panda1, panda2)` - returns the connection level between `panda1` and `panda2`. If they are friends, the level is 1. Otherwise, count the number of friends you need to go through from `panda` in order to get to `panda2`. If they are not connected at all, return `-1`! Return `False` if one of the pandas are not member of the network.
 * `are_connected(panda1, panda2)` - return `True` if the pandas are connected somehow, between friends, or `False` otherwise.
+* `how_many_gender_in_network(level, panda, gender)` - returns the number of `gender` pandas (male of female) that in the `panda` network in that many  `level`s deep. If `level == 2`, we will have to look in all friends of `panda` and all of their friends too. And count
 
 ## An example
 
