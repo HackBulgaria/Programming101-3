@@ -41,7 +41,7 @@ False
 >>> account.balance()
 500
 >>> account.history()
-['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawed', 'Balance check -> 500$', 'Withdraw for 1000$ failed.']
+['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawed', 'Balance check -> 500$', 'Withdraw for 1000$ failed.', 'Balance check -> 500$']
 ```
 
 Also, we should be able to transfer money from one account to another:
