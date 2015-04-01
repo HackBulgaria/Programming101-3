@@ -20,6 +20,7 @@ The `Panda` class also should be possible to:
 
 * Be turned into a string
 * Be hashed and used as a key in a dictionary (`__eq__` and `__hash__`)
+* **Make sure that the `email` is a valid email!**
 
 Two `Panda` instances are equal if they have matching `name`, `email` and `gender` attributes.
 
@@ -52,6 +53,8 @@ for panda in [ivo, rado, tony]:
 network.make_friends(ivo, rado)
 network.make_friends(rado, tony)
 
-network.connection_level(ivo, rado) == 1
-network.connection_level(ivo, tony) == 2
+network.connection_level(ivo, rado) == 1 # True
+network.connection_level(ivo, tony) == 2 # True
+
+network.how_many_gender_in_network(1, rado, "female") == 1 # True
 ```
