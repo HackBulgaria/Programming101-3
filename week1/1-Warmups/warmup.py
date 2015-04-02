@@ -70,6 +70,16 @@ def count_vowels(string):
 
     return count
 
+def count_consonants(string):
+    consonants = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ"
+    count = 0
+
+    for ch in string:
+        if ch in consonants:
+            count += 1
+
+    return count
+
 
 def char_histogram(string):
     result = {}
