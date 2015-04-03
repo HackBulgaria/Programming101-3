@@ -58,3 +58,16 @@ network.connection_level(ivo, tony) == 2 # True
 
 network.how_many_gender_in_network(1, rado, "female") == 1 # True
 ```
+
+
+## Save and laod from file
+
+The next thing our social network is going to do is ``saving to your hard drive``.
+
+### social_network.save(file_name)
+
+Write a function that saves the hole social network to a file. The foramt ot that file is at your choice. You have to be abe to load it next time. So all the data in the network must be written down to that file.
+
+### social_network.load(file_name)
+
+Write a function that loads the hole social network from a file. All the pandas and all the relations.
