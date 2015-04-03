@@ -110,8 +110,7 @@ def prime_factorization(n):
     return result
 
 
-# My version of prime_factorization with these 2 funtions:
-def counter(n, prime_number):
+def counter_of_dividers(n, prime_number):
     divider_counter = 0
     while n % prime_number == 0:
         divider_counter += 1
@@ -121,7 +120,7 @@ def counter(n, prime_number):
 
 def prime_factorization2(n):
     primes = [x for x in range(2, n+1) if is_prime(x)]
-    return [(num, counter(n, num)) for num in primes if counter(n, num) != 0]
+    return [(num, counter_of_dividers(n, num)) for num in primes if counter_of_dividers(n, num) != 0]
 
 
 def take_same(items):
@@ -192,16 +191,17 @@ def reduce_file_path(path):
     return result
 
 
-def same_characters(string):
-    return all([string[0] == ch for ch in string])
+def same_characters(letter, string):
+    return all([letter == ch for ch in string])
 
 
 def is_an_bn(word):
-    if len(word) % 2 == 0:
-        a = word[:int(len(word)/2)]
-        b = word[int(len(word)/2):]
+    word_length = len(word)
+    if word_length % 2 == 0:
+        a = word[: word_length // 2]
+        b = word[word_length // 2:]
 
-        return same_characters(a) and same_characters(b)
+        return same_characters("a", a) and same_characters("b", b)
 
     return False
 
