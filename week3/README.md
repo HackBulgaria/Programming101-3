@@ -7,3 +7,4 @@ Materials to read:
 3. [Python errors & exceptions](https://docs.python.org/3.4/tutorial/errors.html)
 4. [Graph algorithms in Python](https://www.python.org/doc/essays/graphs/)
 5. [How to find the shortest path in an unweighted graph using BFS](materials/graph.py)
+6. [How to serialize / deserializ a class in Python using JSON](materials/panda_json.py)
