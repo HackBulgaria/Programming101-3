@@ -42,3 +42,26 @@ class PandaSocialNetwork:
         self.network[panda1].append(panda2)
         self.network[panda2].append(panda1)
 
+    
+    def how_many_gender_in_network(self, level, panda, gender):
+        count = 0
+        for panda_user in self.network:
+            current_connection_level = self.connection_level(panda, panda_user)
+
+            if panda_user != panda and current_connection_level <= level and panda_user.gender() == gender:
+                count += 1
+
+        return count
+
+
+
+
+
+
+
+
+
+
+
+
+
