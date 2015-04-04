@@ -15,6 +15,7 @@ graph = {
     "12": ["11"]
 }
 
+
 def bfs(graph, start, end):
     visited = set()
     queue = []
@@ -33,13 +34,13 @@ def bfs(graph, start, end):
         if current_node == end:
             found = True
             break
-        
+
         for neighbour in graph[current_node]:
             if neighbour not in visited:
                 path_to[neighbour] = current_node
                 visited.add(neighbour)
                 queue.append(neighbour)
-    
+
     if found:
         while path_to[end] is not None:
             path_length += 1
@@ -48,17 +49,5 @@ def bfs(graph, start, end):
     print(json.dumps(path_to, sort_keys=True, indent=4))
     return path_length
 
-
-
 result = bfs(graph, "1", "10")
 print(result)
-
-
-
-
-
-
-
-
-
-
