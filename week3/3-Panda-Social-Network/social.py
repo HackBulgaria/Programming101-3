@@ -1,21 +1,7 @@
-from enum import Enum
-
-
-class Gender(Enum):
-    MALE = "male"
-    FEMALE = "female"
-
-    @classmethod
-    def get_gender_or_female(cls, gender):
-        if gender not in [member.value for _, member in cls.__members__.items()]:
-            return cls.FEMALE.value
-
-        return gender
-
 class PandaSocialNetwork:
     def __init__(self):
         self.network = {}
-    
+
     def has_panda(self, panda):
         return panda in self.network
 
@@ -24,9 +10,10 @@ class PandaSocialNetwork:
             raise Exception("Panda already there")
 
         self.network[panda] = []
-    
+
     def are_friends(self, panda1, panda2):
-        return panda1 in self.network[panda2] and panda2 in self.network[panda1]
+        return panda1 in self.network[panda2] and\
+            panda2 in self.network[panda1]
 
     def make_friends(self, panda1, panda2):
         if not self.has_panda(panda1):
@@ -35,33 +22,8 @@ class PandaSocialNetwork:
         if not self.has_panda(panda2):
             self.add_panda(panda2)
 
-        
         if self.are_friends(panda1, panda2):
             raise Exception("Pandas are already friends")
 
         self.network[panda1].append(panda2)
         self.network[panda2].append(panda1)
-
-    
-    def how_many_gender_in_network(self, level, panda, gender):
-        count = 0
-        for panda_user in self.network:
-            current_connection_level = self.connection_level(panda, panda_user)
-
-            if panda_user != panda and current_connection_level <= level and panda_user.gender() == gender:
-                count += 1
-
-        return count
-
-
-
-
-
-
-
-
-
-
-
-
-
