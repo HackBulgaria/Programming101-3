@@ -6,3 +6,4 @@ Materials to read:
 2. [unittest documentation and examples](https://docs.python.org/3/library/unittest.html)
 3. [Python errors & exceptions](https://docs.python.org/3.4/tutorial/errors.html)
 4. [Graph algorithms in Python](https://www.python.org/doc/essays/graphs/)
+5. [How to find the shortest path in an unweighted graph using BFS](materials/graph.py)
