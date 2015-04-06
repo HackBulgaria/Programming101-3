@@ -72,8 +72,6 @@ code.name == "For Code" # True
 
 Save the `*.json` files in a specified folder, for instance, called `playlist-data`. Make the `load` function look there too.
 
-## Music Crawler
-
 ## MusicCrawler
 
 Create a `MusicCrawler` class that creates playlists and songs objects from real files on your file system. Most of .mp3 and .ogg files have tags that describe them. Tags hold information about the title, artist, album etc. Our task is to crawl a directory full of .mp3 or .ogg files and create a new playlist by reading the files' tags.
@@ -81,7 +79,8 @@ Create a `MusicCrawler` class that creates playlists and songs objects from real
 __We recommend you [mutagen](http://mutagen.readthedocs.org/en/latest/#) to read audio metadata__
 
 Example:
-```python3
+
+```python
 >>> crawler = MusicCrawler("/home/ivaylo/Music/")
 >>> playlist = crawler.generate_playlist()
 ```
@@ -90,7 +89,38 @@ As you see, the constructor takes only one argument - the `path` of the director
 
 `generate_playlist()` method craws all the files and returns a new playlist full of songs.
 
-## MusicPlayer
+## MusicPlayer *
+
+**This is a hard problem. Solve only if you want to.**
+
 If you want to make this program usable you should implement a console interface for it. __You don't have to test this class!__ Implement this in the way you like it. Make it as user friendly as a console can be. 
 
 This class should only parse user commands and call methods from the above classes.
+
+In order to play music from the console, you can use the `mpg123` command:
+
+```
+$ sudo apt-get install mpg123
+```
+
+After this, you can do:
+
+```
+$ mpg123 music.mp3
+```
+
+In order to make the console responsive while the music is playing, you may take a look at this code:
+
+```python
+from subprocess import Popen, PIPE
+
+def play(mp3Path):
+    p = Popen(["mpg123", mp3Path], stdout=PIPE, stderr=PIPE)
+    return p
+
+def stop(process):
+    process.kill()
+
+p = play("music.mp3")
+stop(p)
+```
