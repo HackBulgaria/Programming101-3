@@ -12,7 +12,7 @@ s = Song(title="Odin", artist="Manowar", album="The Sons of Odin", length="3:44"
 
 The methods we want for our `Song` are:
 
-* `__str__` - should be able to turn the song into the following string: `"{artist} - {name} from {album} - {length}"`
+* `__str__` - should be able to turn the song into the following string: `"{artist} - {title} from {album} - {length}"`
 * Our `Song` should be hashabe! Implement `__eq__` and `__hash__`
 * `length(seconds=True)` should return the length in seconds.
 * `length()` should return the string representation of the length
