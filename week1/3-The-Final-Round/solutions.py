@@ -280,3 +280,21 @@ def magic_square(matrix):
 
     return all([s[0] == s[i] for i in range(len(s))])
 
+
+import calendar
+def friday_years(start, end):
+    count_friday_years = 0
+
+    for year in range(start, end):
+        count_fidays_in_year = 0
+
+        for month in range(1, 13):
+            month_calendar = calendar.monthcalendar(year, month)
+            for week in month_calendar:
+                if week[4] != 0:
+                    count_fidays_in_year += 1
+
+        if count_fidays_in_year == 53:
+            count_friday_years += 1
+
+    return count_friday_years
