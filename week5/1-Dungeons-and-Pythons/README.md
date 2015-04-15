@@ -344,6 +344,16 @@ Hero hits with Axe for 20 dmg. Emely health is 0
 Enemy is dead!
 ```
 
+### Fight steps
+
+The fight follows this algorithm:
+
+* Our hero always attacks first
+* We always use the attack that deals more damage
+* If our weapon and our spell deals the same amount of damage, use the spell first.
+* When you run out of mana, use the weapon (if any)
+* Think of how you can make the enemies cast spells?
+
 ## Creativity and Improvisation
 
 As you can see, this is a big and a fat problem. There are things that are not well defined.
