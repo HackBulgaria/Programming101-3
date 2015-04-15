@@ -71,7 +71,7 @@ Here are the requirements:
 Our hero can also increase his mana in two ways:
 
 * Each time he makes a move, his `mana` is increased by `mana_regeneration_rate` amount.
-* He can drink a mana potion, which will increse his health by the amount of mana points the potion have.
+* He can drink a mana potion, which will increse his mana by the amount of mana points the potion have.
 
 **Hero's mana cannot go above the start `mana` given to him, neither he can go down below 0 mana.**
 
@@ -119,7 +119,7 @@ The `Enemy` should have the following methods, just like our hero:
 * `attack()`
 
 * **Enemies cannot regenerate mana!**
-* **Enemies need not to equip weapons or learn spells. They have some basic damage**
+* **Enemies have starting damage, which is different from a weapon or a spell. They can equip weapons or learn spells but it is not required for them to have any damage, as it is for our hero.**
 
 ## The weapons and spells
 
