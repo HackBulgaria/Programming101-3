@@ -7,3 +7,4 @@ In order to have a nice flow, check the following materials:
 * [GitHub Flow & How to work in teams](https://guides.github.com/introduction/flow/)
 * [What is a Git branch](http://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is)
 * [What is a Pull Request](https://help.github.com/articles/using-pull-requests/)
+* [How to make Sublime default commit message editor for git](https://help.github.com/articles/associating-text-editors-with-git/#using-sublime-text-as-your-editor)
