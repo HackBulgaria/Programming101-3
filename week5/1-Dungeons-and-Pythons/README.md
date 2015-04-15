@@ -105,7 +105,7 @@ The method can be called in two ways:
 Implement a class `Enemy` which is initialized like that:
 
 ```python
-enemy = Enemy(health=100, mana=100)
+enemy = Enemy(health=100, mana=100, damage=20)
 ```
 
 The `Enemy` should have the following methods, just like our hero:
@@ -118,7 +118,8 @@ The `Enemy` should have the following methods, just like our hero:
 * `take_mana()`
 * `attack()`
 
-**Enemies cannot regenerate mana!**
+* **Enemies cannot regenerate mana!**
+* **Enemies need not to equip weapons or learn spells. They have some basic damage**
 
 ## The weapons and spells
 
@@ -150,7 +151,7 @@ s = Spell(name="Fireball", damage=30, mana_cost=50, cast_range=2)
 `name` and `damage` are self explanatory.
 
 * `mana_cost` means that the spell needs at least that much amount of mana in order to be casted. Raise an error if you cannot cast that spell.
-* `cast_range` is a bit more special and related to the Dungeon. You can cast that spell on an enemy, which is within the `cast_range`. If `cast_range` is 1, you can attack enemies, that are next to you. If cast range is greater than 1, you can attack enemies from distance, that is `cast_range` squares away.
+* `cast_range` is a bit more special and related to the Dungeon. You can cast that spell on an enemy, which is within the `cast_range`. If `cast_range` is 1, you can attack enemies, that are next to you. If cast range is greater than 1, you can attack enemies from distance, that is `cast_range` squares away. **Casting range is only calculated in a straight line. You cannot curve spells**
 
 ## The Dungeons and treasures
 
@@ -226,9 +227,9 @@ H.##.....T
 ###T#####G
 ```
 
-### `moveHero()`
+### `move_hero()`
 
-Now, implemented a method `moveHero(direction)` where:
+Now, implemented a method `move_hero(direction)` where:
 
 * `direction` is either `"up"`, `"down"`, `"left"` and `"right"`
 
@@ -239,7 +240,7 @@ Return `True` if he can move into that `direction` or `Fasle` otherwise.
 __For example:__
 
 ```
->>> map.moveHero("right")
+>>> map.move_hero("right")
 True
 >>> map.print_map()
 .H##.....T
@@ -247,9 +248,9 @@ True
 #.###E###E
 #.E...###.
 ###T#####G
->>> map.moveHero("up")
+>>> map.move_hero("up")
 False
->>> map.moveHero("down")
+>>> map.move_hero("down")
 Found treasure!
 >>> map.print_map()
 ..##.....T
@@ -272,4 +273,80 @@ It is a good idea to have a finite list of treasures that can be found in a give
 
 One idea is to keep a list of treasure in the **txt** file, where the map is. Other idea is to have a separate file that keeps the loot for each map.
 
-Our suggestion for you is to keep a track of all treasures in the `Dungeon` class and have a method `pickTreasure()` that returns an instance of randomly picked treasure.
+Our suggestion for you is to keep a track of all treasures in the `Dungeon` class and have a method `pick_treasure()` that returns an instance of randomly picked treasure.
+
+## Fights
+
+The interesting part is here.
+
+Our hero must fight his enemies in order to reach the exit of the dungeon.
+
+Our `Dungeon` should have a `hero_attack(by)` method, which checks if our hero can attack either by weapon or by spell, again having a `by` keyword-argument, like the `Weapon`
+
+
+A fight happens when:
+
+* Our hero walks into the same position as the enemy - then the fights start automatically
+* Our hero is within some range of the enemy and triggers `hero_attack` method call. Then we can attack our enemy, but our enemy must walk to our place in order to start attacking us. This is really helpful with spells!
+
+Implement a `Fight` class that takes a hero and an emeny and simulates a fight between them.
+
+The `Fight` is over when either our hero or the enemy is dead.
+
+Here is a full example:
+
+```python
+>>> h = Hero(name="Bron", title="Dragonslayer", health=100, mana=100, mana_regeneration_rate=2)
+>>> w = Weapon(name="The Axe of Destiny", damage=20)
+>>> h.equip(w)
+>>> s = Spell(name="Fireball", damage=30, mana_cost=50, cast_range=2)
+>>> h.learn(s)
+>>> map = Dungeon("level1.txt")
+>>> map.spawn(h)
+>>> map.print_map()
+H.##.....T
+#T##..###.
+#.###E###E
+#.E...###.
+###T#####G
+>>> map.move_hero("left")
+True
+>>> map.move_hero("down")
+Found health potion. Hero health is max.
+>>> map.print_map()
+..##.....T
+#H##..###.
+#.###E###E
+#.E...###.
+###T#####G
+>>> map.hero_attack(by="spell")
+Nothing in casting range 2
+>>> map.move_hero("down")
+>>> map.move_hero("down")
+>>> map.print_map()
+..##.....T
+#.##..###.
+#.###E###E
+#HE...###.
+###T#####G
+>>> map.hero_attack(by="spell")
+A fight is started between our Hero(health=100, mana=100) and Enemey(health=100, mana=100, damage=20)
+Hero casts a Fireball, hits enemy for 20 dmg. Enemy health is 80
+Enemy moves one square to the right in order to get to the hero. This is his move.
+Hero casts a Fireball, hits enemy for 20 dmg. Enemy health is 60
+Enemy hits hero for 20 dmg. Hero health is 80
+Hero does not have mana for another Fireball.
+Hero hits with Axe for 20 dmg. Enemy health is 40
+Enemy hits hero for 20 dmg. Hero health is 60.
+Hero hits with Axe for 20 dmg. Enemy health is 20
+Enemy hits hero for 20 dmg. Hero health is 40.
+Hero hits with Axe for 20 dmg. Emely health is 0
+Enemy is dead!
+```
+
+## Creativity and Improvisation
+
+As you can see, this is a big and a fat problem. There are things that are not well defined.
+
+**This is up to you. Make an interesting game!**
+
