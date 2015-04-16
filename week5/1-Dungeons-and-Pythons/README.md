@@ -117,6 +117,7 @@ The `Enemy` should have the following methods, just like our hero:
 * `take_healing()`
 * `take_mana()`
 * `attack()`
+* `take_damage(damage)`
 
 * **Enemies cannot regenerate mana!**
 * **Enemies have starting damage, which is different from a weapon or a spell. They can equip weapons or learn spells but it is not required for them to have any damage, as it is for our hero.**
