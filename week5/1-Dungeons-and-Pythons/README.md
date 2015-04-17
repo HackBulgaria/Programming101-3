@@ -209,7 +209,7 @@ Implement a method, called `spawn(hero)` where:
 
 This one takes the first free spawning point in the map and populates it with `H`.
 
-The first free spawning point is the one, that we get if we start from top-left and walk left.
+The first free spawning point is the one, that we get if we start from top-left and walk right.
 
 If the spawning is successful - return True. Otherwise (If there are no more spawning points, return False)
 
@@ -310,7 +310,7 @@ H.##.....T
 #.###E###E
 #.E...###.
 ###T#####G
->>> map.move_hero("left")
+>>> map.move_hero("right")
 True
 >>> map.move_hero("down")
 Found health potion. Hero health is max.
@@ -333,7 +333,7 @@ Nothing in casting range 2
 >>> map.hero_attack(by="spell")
 A fight is started between our Hero(health=100, mana=100) and Enemey(health=100, mana=100, damage=20)
 Hero casts a Fireball, hits enemy for 20 dmg. Enemy health is 80
-Enemy moves one square to the right in order to get to the hero. This is his move.
+Enemy moves one square to the left in order to get to the hero. This is his move.
 Hero casts a Fireball, hits enemy for 20 dmg. Enemy health is 60
 Enemy hits hero for 20 dmg. Hero health is 80
 Hero does not have mana for another Fireball.
