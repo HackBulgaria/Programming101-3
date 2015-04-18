@@ -16,6 +16,30 @@ graph = {
 }
 
 
+def bfs_with_levels(graph, start, end):
+    Q = []
+    visited = set()
+
+    Q.append((0, start))
+    visited.add(start)
+
+    while len(Q) != 0:
+        node_data = Q.pop(0)
+        print(node_data)
+        current_level = node_data[0]
+        current_node = node_data[1]
+        
+        if current_node == end:
+            return current_level
+        
+        for neighbour in graph[current_node]:
+            if neighbour not in visited:
+                visited.add(neighbour)
+                Q.append((current_level + 1, neighbour))
+
+    return -1
+
+
 def bfs(graph, start, end):
     visited = set()
     queue = []
