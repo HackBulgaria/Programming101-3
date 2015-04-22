@@ -48,6 +48,7 @@ We want to be able to ask the following questions:
 
 ### Implementation details
 
+* In order to fetch JSON for a given user you can make call to this API endpoint: [https://api.github.com/users/radorado](https://api.github.com/users/radorado). Just substitute `radorado` with your username.
 * Use the [GitHub API](https://developer.github.com/v3/) to fetch an user's followers,
 * Make sure to create yourself a GitHub Application from your [Settings panel](https://github.com/settings/applications) and obtain `client_id` and `client_secret`. This is because of API Rate Limiting - https://developer.github.com/v3/rate_limit/
 * Make calls with your `client_id` and `client_secret` in order to have `5000` requests per hour!
