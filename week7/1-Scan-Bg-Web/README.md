@@ -38,6 +38,8 @@ for key, count in h.items():
 # Apache: 2
 # nginx: 2
 # IIS: 1
+
+h.get_dict() == {"Apache": 2, "nginx": 2, "IIS": 1}
 ```
 
 ## What serves that website?
@@ -133,3 +135,6 @@ As you can see, there are a lot of different versions of Apache or nginx or IIS.
 Do so and plot the resulted histogram in a histogram chart that looks something like that:
 
 ![](histogram.png)
+
+
+You can use [matplotlib](http://matplotlib.org/) for ploting.
