@@ -180,3 +180,32 @@ There is another HTTP verb that we can use. It is called `HEAD`.
 This request asks only for the server headers and not for the content - exactly what we need.
 
 Read the [requests documentation](http://docs.python-requests.org/en/latest/user/quickstart/) to see how to make a `HEAD` request.
+
+### Ploting from dictionary
+
+When you are ready and you have a dictionary with results, you can plot the histogram like that: (it is ugly!)
+
+```python
+from hist import Histogram
+import matplotlib.pyplot as plt
+
+h = Histogram()
+
+# .. results ..
+
+h = h.get_dict()
+keys = list(h.keys())
+values = list(h.values())
+
+X = list(range(len(keys))) 
+
+plt.bar(X, list(h.values()), align="center")
+plt.xticks(X, keys)
+
+plt.title(".bg servers")
+plt.xlabel("Server")
+plt.ylabel("Count")
+
+plt.savefig("histogram.png")
+```
+
