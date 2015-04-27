@@ -33,13 +33,13 @@ h.count("IIS") == 1 # True
 h.count("IBM Web Server") is None # True
 
 
-for key, count in h.items():
+for key, count in h.items():c
     print("{}: {}".format(key, count))
 # Apache: 2
 # nginx: 2
 # IIS: 1
 
-h.get_dict() == {"Apache": 2, "nginx": 2, "IIS": 1}
+h.get_dict() == {"Apache": 2, "nginx": 2, "IIS": 1} # True
 ```
 
 ## What serves that website?
@@ -157,7 +157,7 @@ Accept: */*
 
 As you can see, the `User-Agent` header says python-requests. This is not good.
 
-If we want to send a request that looks like google chrome, we cn check here - http://www.useragentstring.com/pages/Chrome/
+If we want to send a request that looks like google chrome, we can check here - http://www.useragentstring.com/pages/Chrome/
 
 In order to do this, we will use the `headers=` keyword for `requests.get`
 
