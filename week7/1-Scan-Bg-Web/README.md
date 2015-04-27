@@ -138,3 +138,45 @@ Do so and plot the resulted histogram in a histogram chart that looks something 
 
 
 You can use [matplotlib](http://matplotlib.org/) for ploting.
+
+## Hints
+
+Read this only if you have done most of hte problem.
+
+### User Agent
+
+If you send request from python's `requests` it looks like that:
+
+```
+GET / HTTP/1.1
+Host: localhost:8000
+User-Agent: python-requests/2.3.0 CPython/3.4.2 Linux/3.16.0-34-generic
+Accept-Encoding: gzip, deflate
+Accept: */*
+```
+
+As you can see, the `User-Agent` header says python-requests. This is not good.
+
+If we want to send a request that looks like google chrome, we cn check here - http://www.useragentstring.com/pages/Chrome/
+
+In order to do this, we will use the `headers=` keyword for `requests.get`
+
+```python
+our_headers = {
+ "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+}
+
+requests.get("http://localhost:8000", headers=our_headers)
+```
+
+This will look like a Google Chrome request, which is good when we are crawling.
+
+### HEAD instead of GET
+
+When we make a `GET` request, we download the entire HTML. This can be slow, especially on slow internet connections.
+
+There is another HTTP verb that we can use. It is called `HEAD`.
+
+This request asks only for the server headers and not for the content - exactly what we need.
+
+Read the [requests documentation](http://docs.python-requests.org/en/latest/user/quickstart/) to see how to make a `HEAD` request.
