@@ -138,11 +138,11 @@ __Now, let's insert a new language in our table!__
 
 Execute the following statements:
 
-*
+
 ```sql
 INSERT INTO languages(id, language, answer, answered, guide) VALUES(9, "PHP", "$$$", 0, "Can you handle this piece of PHP?");
 ```
-*
+
 ```sql
 SELECT language FROM languages;
 ```
@@ -183,14 +183,14 @@ We were talking about CRUD operations - Create, Read, Update, Delete of a given 
 
 If we take a look at the SQL query statements, we can relate:
 
-* ```SELECT``` = Read
-* ```UPDATE``` = Update
-* ```INSERT``` = Create
-* ```DELETE``` = Delete
+* `SELECT` = Read
+* `UPDATE` = Update
+* `INSERT` = Create
+* `DELETE` = Delete
 
 ## A simple Python Script to query the Polyglot database
 
-Copy ```polyglot.db``` to where you work, and create the following script:
+Copy `polyglot.db` to where you work, and create the following script:
 
 ```python
 import sqlite3
