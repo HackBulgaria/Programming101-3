@@ -87,34 +87,34 @@ A ```SELECT``` statement, returns a list of rows. We ```SELECT``` by giving the 
 
 Run the following SELECT statements in the sqilite3 shell:
 
-1.
+
 ```sql
 SELECT id FROM languages;
 ```
-2.
+
 ```sql
 SELECT id, language FROM languages;
 ```
-3.
+
 ```sql
 SELECT id, language, answer, answered FROM languages;
 ```
-4.
+
 ```sql
 SELECT id, language FROM languages WHERE answered = 0;
 ```
-5.
+
 ```sql
 SELECT id, language FROM languages WHERE answered = 1;
 ```
 
 __Now, lets update few languages to be answered. We will change the answered value for each language from 0 to 1:__
 
-1.
+
 ```sql
 UPDATE languages SET answered = 1 WHERE language = "Python";
 ```
-2.
+
 ```sql
 SELECT id, language FROM languages WHERE answered = 1;
 ```
@@ -209,6 +209,18 @@ Run the program and see the output!
 As you can see, connecting to sqlite is as simple as that!
 
 ## Creating tables with Python
+
+We are going to use multiline strings in Python:
+
+```python
+create_table_query = """
+CREATE TABLE users(id INTEGER PRIMARY KEY, name TEXT,
+                   phone TEXT, email TEXT unique, password TEXT)
+"""
+```
+
+This query, if executed and commited, will create a table with 5 columns.
+
 
 If you see this [tutorial you will see how to create a database](http://www.pythoncentral.io/introduction-to-sqlite-in-python/), you will see how a database is created!
 
