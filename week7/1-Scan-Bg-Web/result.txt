@@ -1,0 +1,170 @@
+: 2
+cloudflare-nginx: 5
+Apache/2.2.3 (CentOS): 11
+nginx/1.2.1: 5
+Microsoft-IIS/6.0: 15
+Apache/1.3.26 (Unix): 2
+Microsoft-IIS/7.0: 3
+Apache/2.4.7 (Ubuntu): 10
+Apache/2.2.11 (Fedora): 1
+nginx/1.7.1: 1
+Apache/2.2.15 (Scientific Linux): 2
+Apache/2.4.6 (Linux/SUSE): 1
+Apache/2.2.29 (FreeBSD) PHP/5.5.22 mod_ssl/2.2.29 OpenSSL/1.0.1j-freebsd: 1
+Apache/2.2.22 (FreeBSD) DAV/2 mod_ssl/2.2.22 OpenSSL/0.9.8zc-freebsd mod_apreq2-20090110/2.8.0 mod_perl/2.0.5 Perl/v5.12.4: 1
+Apache/2.4.7 (Win64) OpenSSL/1.0.1g mod_fcgid/2.3.9: 1
+Apache/2.4.2 (Win32) OpenSSL/0.9.8x PHP/5.4.8: 1
+nginx admin: 1
+Apache/2.4.12 (FreeBSD) OpenSSL/0.9.8zd-freebsd PHP/5.4.38: 1
+none, : 1
+Zeus/4.3: 1
+Apache/2.4.7 (Unix) PHP/5.4.25: 1
+Apache/2.2.8 (Unix) DAV/2 mod_ssl/2.2.8 OpenSSL/0.9.8e PHP/5.2.5 mod_apreq2-20051231/2.6.0 mod_perl/2.0.2 Perl/v5.10.0: 1
+Apache/2.2.2 (Unix) mod_ssl/2.2.2 OpenSSL/0.9.8b PHP/5.2.10: 1
+Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/1.0.1e-fips mod_bwlimited/1.4: 3
+Microsoft-IIS/5.0: 5
+Apache/2.2.27 (CentOS): 2
+Apache/1.3.42 (Unix) mod_gzip/1.3.26.1a PHP/5.2.13 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5: 1
+Apache/2.2.16 (Unix): 1
+Apache/2.0.59: 1
+Apache/2: 7
+Apache/2.2.9 (Debian) mod_jk/1.2.26 PHP/5.2.6-1+lenny16 with Suhosin-Patch mod_ssl/2.2.9 OpenSSL/0.9.8g: 1
+Apache/2.4.12 (FreeBSD) PHP/5.6.6: 1
+Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_bwlimited/1.4 mod_fcgid/2.3.6: 1
+Apache/2.2.17 (Win32) mod_ssl/2.2.17 OpenSSL/0.9.8o PHP/5.3.4 mod_perl/2.0.4 Perl/v5.10.1: 1
+Apache/2.2.11 (Unix) mod_ssl/2.2.11 OpenSSL/0.9.8n PHP/5.4.3: 1
+Apache/2.2.16 (Debian): 16
+NOYB: 1
+nginx/0.7.67: 1
+Apache/2.2.15 (Debian): 1
+Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.2.17: 1
+Apache/2.2.14 (Unix) mod_ssl/2.2.14 OpenSSL/0.9.8e-fips-rhel5 FrontPage/5.0.2.2635 mod_bwlimited/1.4 mod_auth_passthrough/2.1: 1
+Apache/2.2.3 (Linux/SUSE): 3
+Apache/2.2.14 (Ubuntu): 3
+NULL: 1
+Apache/2.4.10 (Debian): 1
+Oracle-Application-Server-10g: 1
+Apache/2.2.17 (Unix) mod_ssl/2.2.17 OpenSSL/0.9.8r DAV/2 PHP/5.3.6: 1
+Apache/2.0.0l33t (Unix) mod_ssl/2.0.0l33t OpenSSL/0.9.7l PHP/5.2.10: 1
+Apache/2.2.9 (Debian) PHP/5.2.6-1+lenny16 with Suhosin-Patch: 2
+Secure Web/C2-1.097 (Unix): 1
+Microsoft-IIS/8.0: 2
+Apache/2.2.15 (Linux/SUSE): 1
+Apashi 1.1 mod_fcgid/2.3.5: 1
+Apache-Coyote/1.1: 1
+Apache mod_fcgid/2.3.7 mod_auth_pgsql/2.0.3: 2
+Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4: 1
+Apache/2.2.16 (Ubuntu): 2
+Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/0.9.8n PHP/5.3.0: 1
+Apache/2.4.3 (Win32) PHP/5.4.7: 1
+Apache/2.4.10 (FreeBSD) PHP/5.3.29 with Suhosin-Patch: 1
+Microsoft-IIS/7.5: 23
+Apache/2.2.23 (Unix) mod_ssl/2.2.23 OpenSSL/1.0.0-fips mod_bwlimited/1.4 mod_qos/9.74 mod_fcgid/2.3.6: 1
+Apache/2.2.15 (CentOS): 13
+nginx: 37
+Apache/2.2.22 (Ubuntu): 18
+Apache/2.2.22 (FreeBSD) PHP/5.4.3 mod_ssl/2.2.22 OpenSSL/0.9.8q DAV/2: 1
+Apache/2.2.27 (Unix) mod_ssl/2.2.27 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4: 1
+Apache/2.2.22 (FreeBSD) SVN/1.7.0 PHP/5.4.13 mod_ssl/2.2.22 OpenSSL/0.9.8x DAV/2: 1
+nginx/1.1.19: 4
+nginx/1.6.1: 1
+Apache/1.3.37 (Unix) mod_ssl/2.8.28 OpenSSL/0.9.7d PHP/4.3.11: 1
+nginx/0.7.62: 1
+Apache/2.2.13 (Linux/SUSE): 1
+Apache/2.2.3 (Debian) DAV/2 SVN/1.4.2 mod_jk/1.2.18 PHP/5.2.0-8+etch16 mod_ssl/2.2.3 OpenSSL/0.9.8c: 2
+Apache/2.2.11 (Win32) DAV/2 mod_ssl/2.2.11 OpenSSL/0.9.8i PHP/5.2.9: 1
+Apache/2.2.9 (Debian) PHP/5.2.6-1+lenny13 with Suhosin-Patch: 1
+Web Server 1.0: 1
+Apache/2.2.27 (Unix) DAV/2 PHP/5.3.29: 1
+Apache/2.2.27 (FreeBSD) mod_ssl/2.2.27 OpenSSL/1.0.1i-freebsd DAV/2 PHP/5.4.31 mod_perl/2.0.8 Perl/v5.16.3: 1
+Apache/2.0.63 (Unix) DAV/2 PHP/5.2.11: 1
+Apache/2.2.17 (Fedora): 1
+Apache/2.2.27 (Unix) mod_ssl/2.2.27 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 PHP/5.4.27: 1
+nginx/0.8.53: 1
+Apache/1.3.39 (Unix) PHP/5.2.5 with Suhosin-Patch mod_ssl/2.8.30 OpenSSL/0.9.7e-p1: 1
+Apache/2.4.3 (Win32) OpenSSL/1.0.1c PHP/5.4.7: 1
+Microsoft-IIS/8.5: 3
+Apache/2.2.10 (Linux/SUSE): 1
+Apache/2.0.59 (CentOS): 1
+Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/1.0.1e-fips Phusion_Passenger/4.0.5 mod_bwlimited/1.4 mod_fcgid/2.3.9 mod_perl/2.0.8 Perl/v5.10.1: 3
+Apache/2.0.46 (CentOS): 2
+Apache/2.2.23 (Unix) mod_ssl/2.2.23 OpenSSL/1.0.0-fips mod_bwlimited/1.4 mod_qos/9.74: 1
+Apache/1.3.29 (Win32) PHP/5.2.7: 1
+Apache/2.4.10 (Ubuntu) PHP/5.5.15-1+deb.sury.org~precise+1 OpenSSL/1.0.1f: 1
+Apache/2.2.16: 1
+Apache/2.2.9: 1
+Apache/2.4.10 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4: 2
+Apache/2.2.8 (Unix) mod_ssl/2.2.8 OpenSSL/0.9.8a PHP/5.3.8: 1
+Apache/2.2.23 (FreeBSD) PHP/5.2.17 with Suhosin-Patch mod_ssl/2.2.23 OpenSSL/0.9.8x DAV/2: 1
+Apache/2.2.15 (FreeBSD): 1
+Apache/2.2.9 (Unix) DAV/2 PHP/5.2.6: 1
+Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.4.16 mod_perl/2.0.9dev Perl/v5.16.3: 1
+Apache/2.4.10 (Linux/SUSE): 1
+Apache/2.2.15: 2
+Apache/1.3.42 (Unix) PHP/4.4.9: 1
+Apache/2.2.17 (FreeBSD) mod_ssl/2.2.17 OpenSSL/0.9.8q DAV/2 PHP/5.2.17 with Suhosin-Patch: 1
+Apache/2.2.11 (FreeBSD) PHP/5.2.8 with Suhosin-Patch: 1
+Apache/2.2.23 (Win32) PHP/5.3.18: 1
+Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips PHP/5.4.16: 1
+Apache/2.4.10 (Unix) OpenSSL/1.0.1j: 2
+Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.4.16: 1
+IBM_HTTP_Server: 2
+Apache/2.2.27 (Unix) mod_ssl/2.2.27 OpenSSL/0.9.8zc DAV/2 PHP/5.3.29: 1
+Apache/2.2.22 (Fedora): 1
+Apache/2.2.22: 4
+Apache/2.2.6 (Fedora): 1
+Apache/2.4.12 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4: 2
+Apache/2.2.22 (Debian): 23
+Apache/1.3.41 (Unix) PHP/5.2.5 mod_ssl/2.8.31 OpenSSL/0.9.8g: 1
+nginx/1.6.2: 5
+Apache/1.3.27 (Unix)  (Red-Hat/Linux) PHP/4.3.10: 1
+Apache/2.0.64 (Unix) PHP/5.3.0: 1
+Apache/2.2.22 (Linux/SUSE): 2
+Apache/2.2: 1
+Secure Web/C2-1.097: 1
+Apache/1.3.37 (Unix) mod_gzip/1.3.26.1a mod_fastcgi/2.4.2 mod_deflate/1.0.21 mod_ssl/2.8.28 OpenSSL/0.9.8d: 1
+Apache/2.4.4 (Unix) OpenSSL/1.0.0-fips PHP/5.4.33: 1
+Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.3 with Suhosin-Patch: 1
+Apache/2.2.11 (Win32) PHP/5.2.9-2: 1
+Apache/1.3.41 (Unix) mod_deflate/1.0.21 PHP/5.3.3 with Suhosin-Patch mod_perl/1.31: 3
+Apache/2.0.59 (Unix) PHP/5.2.9: 1
+nginx/1.4.6 (Ubuntu): 1
+Apache/2.2.21 (Debian): 1
+nginx/1.6.3: 2
+Apache/2.2.10 (Unix) DAV/2 PHP/5.2.8: 1
+Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.27 with Suhosin-Patch: 1
+Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1k DAV/2 PHP/5.3.28: 1
+Apache/2.4.6 (CentOS) PHP/5.4.16: 1
+Apache/2.0.54 (Linux/SUSE): 1
+Apache/2.4.10 (FreeBSD) PHP/5.4.36 OpenSSL/1.0.1j mod_perl/2.0.9dev Perl/v5.18.4: 1
+nginx/1.0.15: 1
+Apache/2.2.4 (Unix) DAV/2 PHP/5.2.3: 1
+Apache/1.3.41 (Unix) PHP/4.4.9 mod_ssl/2.8.31 OpenSSL/0.9.8k: 1
+Apache/2.4.9 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4: 1
+Apache/2.2.6 (Unix) mod_ssl/2.2.6 OpenSSL/0.9.8g DAV/2 PHP/5.2.6: 1
+Apache/1.3.42 (Unix) mod_perl/1.31 PHP/4.4.9 with Suhosin-Patch: 4
+Apache/2.2.23 (FreeBSD) DAV/2 PHP/5.2.17 with Suhosin-Patch mod_ssl/2.2.23 OpenSSL/1.0.1c: 2
+lighttpd/1.4.28: 1
+Apache/2.2.16 (Debian) PHP/5.3.3-7+squeeze19 with Suhosin-Patch: 1
+Apache/1.3.37 (Unix) PHP/4.4.7: 1
+lighttpd/1.4.22: 1
+Apache/1.3.34 (Unix) PHP/4.4.1 mod_perl/1.29 mod_ssl/2.8.25 OpenSSL/0.9.8a: 1
+Apache/2.2.27 (Unix) mod_ssl/2.2.27 OpenSSL/1.0.1e-fips DAV/2 mod_bwlimited/1.4 mod_qos/10.10: 1
+Apache: 384
+nginx/1.0.10: 3
+Apache/2.2.21 (Unix) PHP/5.2.6: 2
+Apache/2.4.6 (Unix) mpm-itk/2.4.6-01 PHP/5.3.28: 1
+Apache/1.3.41 (Unix) PHP/4.4.8 mod_ssl/2.8.31 OpenSSL/0.9.8g: 32
+Apache/2.2.9 (Unix) mod_ssl/2.2.9 OpenSSL/0.9.8e PHP/5.2.6: 1
+Apache/2.2.22 (Unix) mod_ssl/2.2.22 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.3.13: 1
+Apache/2.0.54 (Fedora): 1
+Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.8e-fips-rhel5 mod_fcgid/2.3.6 mod_perl/2.0.5 Perl/v5.8.8: 1
+Apache/2.4.6 (Unix) OpenSSL/1.0.1e PHP/5.4.20: 1
+Apache/2.2.25 (Win32) mod_ssl/2.2.25 OpenSSL/0.9.8y PHP/5.3.29: 1
+nginx/0.7.65: 1
+Apache/2.2.27 (Unix) mod_ssl/2.2.27 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 mod_qos/10.10 mod_fcgid/2.3.6: 1
+Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/1.0.0-fips mod_bwlimited/1.4 mod_fcgid/2.3.6 mod_perl/2.0.6 Perl/v5.10.1: 1
+Apache/2.0.54 (Debian GNU/Linux) mod_fastcgi/2.4.2 PHP/4.4.7-0.dotdeb.0 with Suhosin-Patch mod_ssl/2.0.54 OpenSSL/0.9.7e FrontPage/5.0.2.2635: 1
+Apache/1.3.33: 1
+nginx/1.8.0: 2
+Host.bg redirect server based on Apache/1.3.31 (Unix): 2
