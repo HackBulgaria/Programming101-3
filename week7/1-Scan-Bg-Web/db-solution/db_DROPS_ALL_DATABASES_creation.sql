@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Domains;
 
 CREATE TABLE Domains(
   domain_id INTEGER PRIMARY KEY,
-  domain TEXT,
+  domain TEXT UNIQUE,
   visited INTEGER
 );
 
