@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS Links;
 
 CREATE TABLE Links(
   link_id INTEGER PRIMARY KEY,
-  url TEXT,
+  url TEXT UNIQUE,
   domain_id INTEGER,
   FOREIGN KEY(domain_id) REFERENCES Domains(domain_id)
 );

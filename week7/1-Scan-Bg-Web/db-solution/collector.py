@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 from domains import Domains
+from links import Links
 
 
 if len(sys.argv) <= 1:
@@ -56,7 +57,15 @@ while True:
     for domain_row in domains_to_visit:
         result = collect_domain(domain_row["domain"])
     
-    Domains.visit_domain(conn, domain_row["domain_id"])
+    domain_id = domain_row["domain_id"]
+    
+    Domains.visit_domain(conn, domain_id)
     Domains.insert_domains(conn, result["inbound"])
-    # insert outbound links
+    Links.insert_links(conn, result["outbound"], domain_id)
+
+
+
+
+
+
 
