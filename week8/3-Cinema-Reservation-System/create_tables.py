@@ -1,12 +1,11 @@
 import sqlite3
 import sys
+from settings import DB_NAME, SQL_FILE
 
-db_name = sys.argv[1]
-sql_file = sys.argv[2]
 
-conn = sqlite3.connect(db_name)
+conn = sqlite3.connect(DB_NAME)
 
-with open(sql_file, "r") as f:
+with open(SQL_FILE, "r") as f:
     conn.executescript(f.read())
     conn.commit()
 
