@@ -33,7 +33,6 @@ def head_for_server(domain, url):
     return {
         "url": r.url,
         "headers": r.headers
-
     }
 
 while True:
@@ -49,7 +48,7 @@ while True:
         try:
             result = head_for_server(link["domain"], link["url"]) 
             print("Got result for {}. It is {}".format(link["url"], result["url"])) 
-            Server.insert_server(conn, link["link_id"], result["url"], result["headers"]["Server"])
+            Servers.insert_server(conn, link["link_id"], result["url"], result["headers"]["Server"])
         except:
             pass
     

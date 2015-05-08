@@ -2,7 +2,6 @@ import sqlite3
 import sys
 from bs4 import BeautifulSoup
 import requests
-import time
 
 
 from domains import Domains
@@ -64,12 +63,4 @@ while True:
     Domains.visit_domain(conn, domain_id)
     Domains.insert_domains(conn, result["inbound"])
     Links.insert_links(conn, result["outbound"], domain_id)
-    
-    print("Sleeping for 20 seconds ZzZzz")
-    time.sleep(20)
-
-
-
-
-
 
