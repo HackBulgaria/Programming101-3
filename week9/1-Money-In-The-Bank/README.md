@@ -4,8 +4,6 @@
 
 Your first task is to set up the project! You can find the code within that folder.
 
-__Make a virtual environment__ and install all requirements in `requirements.txt` file.
-
 Then run the program from `start.py`. 
 
 __Try to run the tests.__ If everything is OK you are ready to continue.
