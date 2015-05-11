@@ -1,6 +1,6 @@
 # Money In The Bank
 
-## 1. Setup the project
+## 0. Setup the project
 
 Your first task is to set up the project! You can find the code within that folder.
 
@@ -9,6 +9,12 @@ __Make a virtual environment__ and install all requirements in `requirements.txt
 Then run the program from `start.py`. 
 
 __Try to run the tests.__ If everything is OK you are ready to continue.
+
+## 1. Refactor it
+
+We have provided you a "piece of shit" code. Yep. Blame us all you want. But you need to provide some refactoring and make it look cleaner.
+
+**You have tests. Use them for easier refactoring!**
 
 ## 2. SQL injection
 
