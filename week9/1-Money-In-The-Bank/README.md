@@ -1,13 +1,14 @@
 # Money In The Bank
 
 ## 1. Setup the project
-Project URL: https://github.com/HackBulgaria/money-in-the-bank
 
-Your first task is to set up the project!
+Your first task is to set up the project! You can find the code within that folder.
 
-__Make a virtual environment__ and install all requirements in ```requirements.txt``` file.
+__Make a virtual environment__ and install all requirements in `requirements.txt` file.
 
-Then run the program from ```start.py```. __Try to run the tests.__ If everything is OK you are ready to continue.
+Then run the program from `start.py`. 
+
+__Try to run the tests.__ If everything is OK you are ready to continue.
 
 ## 2. SQL injection
 
@@ -21,8 +22,8 @@ You can try to login and give the following username:
 
 and give anything for the password. You will login successfuly!
 
-
 __Make some unit tests to proof your security.__
+
 
 ## 3. Strong passwords
 
@@ -52,7 +53,7 @@ As a UI (User Interface)  of your application you are using the console.
 
 If you are typing your password in a web form, it appears as `***`. Sadly, this is not the case in our console.
 
-__Make some research and fix that problem.__
+[__Make some research and fix that problem.__](https://docs.python.org/3.4/library/getpass.html#getpass.getpass)
 
 No, you can not test that at all. :D
 
@@ -74,11 +75,15 @@ Your customers need a reset password function!
 __Add an email field in the client module and in the database.__
 Your command must look like this:
 
-```send-reset-password Ivaylo```
+```
+send-reset-password Ivaylo
+```
 
 It sends an email to the user, with a unique random hash code.
 
-```reset-password Ivaylo```
+```
+reset-password Ivaylo
+```
 
 That will ask you for the hash code, that was send to the user. If you know the hash it will led you to change your passwords. That proofs that you are the owner of that email.
 
