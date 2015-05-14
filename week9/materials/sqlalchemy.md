@@ -306,10 +306,10 @@ rado = session.query(Student).filter(Student.name == "Rado").one()
 # Now, lets add some grades to rado:
 
 rado.grades = [Grade(value=6), Grade(value=5), Grade(value=3)]
-session.commit()
 
 # And add grades to ivo
 
 ivo = session.query(Student).filter(Student.name == "Ivo").one()
 ivo.grades.append(Grade(value=6))
 ```
+session.commit()
