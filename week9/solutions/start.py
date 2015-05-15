@@ -1,17 +1,9 @@
 from bank_controller import BankController
+from bank_view import BankView
 from settings import DATABASE
 
 controller = BankController(DATABASE)
+view = BankView(controller)
 
-while True:
-    command = input("Enter command:")
+view.start_taking_commands()
 
-    if command == "register":
-        username = input("Enter username:")
-        password = input("Enter password:")
-
-        success = controller.register(username, password)
-
-
-        if not success:
-            print("Username already registered")

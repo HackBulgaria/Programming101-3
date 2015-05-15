@@ -28,3 +28,9 @@ class BankController:
         self.__session.commit()
         
         return True
+    
+    def login(self, username, password):
+        password = hash_password(password)
+        return self.__session.query(Client) \
+                .filter(Client.username == username, Client.password == password) \
+                .one()
