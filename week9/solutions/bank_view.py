@@ -60,11 +60,13 @@ class BankView:
     def login(self):
         username, password = self.__read_username_password()
 
-        try:
-            self.__user = self.__bank.login(username, password)
+        user = self.__bank.login(username, password)
+        print(user)
+        if user is not None:
+            self.__user = user
             print("You have logged in!")
             print("Hello {} with id {}".format(self.__user.username, self.__user.id))
-        except:
+        else:
             print("Wrong username/password")
     
     def register(self):
