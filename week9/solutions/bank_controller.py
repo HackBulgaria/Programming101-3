@@ -20,7 +20,11 @@ class BankController:
         }
         
         Base.metadata.create_all(self.__engine)
-     
+    
+    def __commit_changes(self, objects):
+        self.__session.add_all(objects)
+        self.__session.commit()
+    
     def __is_registered(self, username):
         try:
             user = self.__session.query(Client).filter(Client.username == username).one()
@@ -30,23 +34,17 @@ class BankController:
     
     def __success_login_attempt(self, user):
         user.login_attempts.append(LoginAttempt(attempt_status=LoginAttempt.SUCCESSFUL_ATTEMPT))
-
-        self.__session.add(user)
-        self.__session.commit()
+        self.__commit_changes([user])
     
     def __failed_login_attempt(self, user):
         user.login_attempts.append(LoginAttempt(attempt_status=LoginAttempt.FAILED_ATTEMPT))
-
-        self.__session.add(user)
-        self.__session.commit()
+        self.__commit_changes([user])
 
     def __block_user(self, user):
         user.is_blocked = True
         delta = datetime.timedelta(minutes=self.__settings["block_for_n_minutes"])
         user.blocked_until = datetime.datetime.utcnow() + delta 
-
-        self.__session.add(user)
-        self.__session.commit()
+        self.__commit_changes([user])
     
     def __unblock_user(self, user):
         user.is_blocked = False
@@ -54,9 +52,7 @@ class BankController:
         
         # Break the last 5 failed attempts
         user.login_attempts.append(LoginAttempt(attempt_status = LoginAttempt.AFTER_BLOCK, user_id = user.id))
-
-        self.__session.add(user)
-        self.__session.commit()
+        self.__commit_changes([user])
     
     def __can_login_after_block(self, user):
         now = datetime.datetime.utcnow()
@@ -94,8 +90,7 @@ class BankController:
                         is_blocked=False,
                         blocked_until = None)
 
-        self.__session.add(client)
-        self.__session.commit()
+        self.__commit_changes([client])
         
         return True
     
