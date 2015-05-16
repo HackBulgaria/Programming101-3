@@ -7,6 +7,7 @@ class BankView:
         self.__bank = bank_controller
         self.__commands = {
             "user": {
+                "create_account": self.create_account
             },
             "menu": {
                 "register": self.register,
@@ -82,6 +83,12 @@ class BankView:
         else:
             print("Username {} already taken".format(username))
     
+    def create_account(self):
+        account_name = input("Enter account name:")
+        account = self.__bank.create_account(self.__user, account_name)
+        
+        print("Account with id {} was created".format(account.id))
+
     def help(self):
         pass
 
