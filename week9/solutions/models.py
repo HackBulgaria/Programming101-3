@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
 
@@ -10,10 +10,13 @@ class Client(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String, unique=True)
     password = Column(String)
+    is_blocked = Column(Boolean)
+    blocked_until = Column(DateTime)
 
 class LoginAttempt(Base):
     FAILED_ATTEMPT = "FAILED"
     SUCCESSFUL_ATTEMPT = "SUCCESS"
+    AFTER_BLOCK = "AFTER BLOCK"
 
     __tablename__ = "Login_Attempts"
     id = Column(Integer, primary_key=True)

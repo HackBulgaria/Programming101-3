@@ -1,3 +1,4 @@
+import datetime
 from models import Client, LoginAttempt
 from base import Base
 
@@ -38,8 +39,38 @@ class BankController:
 
         self.__session.add(user)
         self.__session.commit()
+
+    def __block_user(self, user):
+        user.is_blocked = True
+        delta = datetime.timedelta(minutes=self.__settings["block_for_n_minutes"])
+        user.blocked_until = datetime.datetime.utcnow() + delta 
+
+        self.__session.add(user)
+        self.__session.commit()
     
+    def __unblock_user(self, user):
+        user.is_blocked = False
+        user.blocked_until = None
+        
+        # Break the last 5 failed attempts
+        user.login_attempts.append(LoginAttempt(attempt_status = LoginAttempt.AFTER_BLOCK, user_id = user.id))
+
+        self.__session.add(user)
+        self.__session.commit()
+    
+    def __can_login_after_block(self, user):
+        now = datetime.datetime.utcnow()
+        print(now)
+        print(user.blocked_until)
+        return now >= user.blocked_until
+
     def __can_login(self, user):
+        if user.is_blocked:
+            if self.__can_login_after_block(user):
+                self.__unblock_user(user)
+                return True
+            return False
+
         block_after_n_logins = self.__settings["block_after_n_logins"]
 
         login_attemps = self.__session.query(LoginAttempt).filter(LoginAttempt.user_id == user.id).all()
@@ -48,13 +79,20 @@ class BankController:
         if len(last_n_failed) < block_after_n_logins:
             return True
 
-        return not all(last_n_failed)
+        if all(last_n_failed):
+            self.__block_user(user)
+            return False
+        
+        return True
 
     def register(self, username, password):
         if self.__is_registered(username) is not None:
             return False
         
-        client = Client(username=username, password=hash_password(password))
+        client = Client(username=username, 
+                        password=hash_password(password), 
+                        is_blocked=False,
+                        blocked_until = None)
 
         self.__session.add(client)
         self.__session.commit()
