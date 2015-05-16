@@ -48,6 +48,9 @@ class BankView:
         command = input("What do you want to do? ")
         self.__dispatch_command_from(command, "user") 
 
+    
+    def __handle_login_error(self, message):
+        print(message)
 
     def start_taking_commands(self):
         while True:
@@ -61,13 +64,13 @@ class BankView:
         username, password = self.__read_username_password()
 
         user = self.__bank.login(username, password)
-        print(user)
-        if user is not None:
+
+        if not isinstance(user, str):
             self.__user = user
             print("You have logged in!")
             print("Hello {} with id {}".format(self.__user.username, self.__user.id))
         else:
-            print("Wrong username/password")
+            self.__handle_login_error(user)
     
     def register(self):
         username, password = self.__read_username_password()
