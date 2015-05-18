@@ -5,7 +5,7 @@ In order to get started with Django, you are going to have the following task:
 ## Getting Started - first exercise
 
 1. Create a Django project, that will represent our cinema reserveration system.
-2. Create a new app, called `cinema`, where you are going to add write your code.
+2. Create a new app, called `website`, where you are going to add write your code.
 3. Create models for all of the cinema logic - https://github.com/HackBulgaria/Programming101-3/tree/master/week8/3-Cinema-Reservation-System - Check for how to make foreign keys with Django - https://docs.djangoproject.com/en/1.8/topics/db/examples/many_to_one/ and how to make many-to-many - https://docs.djangoproject.com/en/1.8/topics/db/examples/many_to_many/ using Django's ORM
 4. Create a index view, where you are listing all movies and for each movie, all projections for it. You will have to use Django's templates - https://docs.djangoproject.com/en/1.8/topics/templates/
 
