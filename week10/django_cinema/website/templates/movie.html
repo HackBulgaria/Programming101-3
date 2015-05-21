@@ -1,0 +1,21 @@
+<h1>{{ movie.name }}</h1>
+
+<p>Movie id: {{ movie.id }}</p>
+<p>Movie rating: {{ avg_rating }}</p>
+
+<div>
+  <form method="POST" action="/rate_movie/">
+    {% csrf_token %}
+    <input name="movie_id" type="hidden" value="{{ movie.id }}" />
+    <div>
+      <label>Username:</label>
+      <input name="username" type="text" />
+    </div>
+    <div>
+      <label>Rating:</label>
+      <input name="rating" type="number" min="1" max="10" />
+    </div>
+    <input type="submit" value="Rate" />
+  </form>
+
+</div>

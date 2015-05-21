@@ -1,0 +1,13 @@
+<h1>All movies:</h1>
+
+{% for movie in movies %}
+<h2><a href="show_movie?movie_id={{ movie.id }}">{{ movie.name }}</a></h2>
+
+    <p>Projections for that movie:</p>
+
+    {% for projection in movie.projection_set.all %}
+      <h3>{{ projection }}<h3/>
+    {% endfor %}
+{% endfor %}
+
+
