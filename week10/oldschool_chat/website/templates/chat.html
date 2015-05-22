@@ -1,0 +1,41 @@
+<h1>You are: {{ user.username }}</h1>
+
+<p><a href="{% url 'logout' %}">Logout here</a></p>
+
+<p>Logged users:</p>
+
+{% for user in logged_users %}
+{{ user}} , 
+{% endfor %}
+
+<div id="chat-container">
+  {% for message in messages %}
+  <p>[{{ message.timestamp }}]: {{ message.message }} <strong>from {{ message.user.username }}</strong></p>
+  {% endfor %}
+</div>
+
+<div id="chat-form">
+  <form method="POST" action="{% url 'chat' %}">
+    {% csrf_token %}
+    <label>Message:</label>
+    <input type="text" name="message" />
+    <input type="submit" value="Send message" />
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<h1>Oldschool chat. You control the refresh!</h1>
+
+<h2><a href="{% url 'register' %}">Register here</a></h2>
+
+<form method="POST" action="{% url 'index' %}">
+  {% csrf_token %}
+  <div>
+    <label>Username:</label>
+    <input type="text" name="username" />
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" />
+  </div>
+
+  <input type="submit" value="Login" />
+</form>
+
