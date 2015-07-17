@@ -5,7 +5,7 @@ For example, lets imagine that we have a file, called `solution.py` with:
 ```python
 def sum(xs):
     result = 0
-    
+
     for x in xs:
         result += x
     
