@@ -4,17 +4,17 @@ Make a decorator ``accepts`` that takes as many arguments as the function takes.
 ## Examples
 ```python
 @accepts(str)
-def say_hallo(name):
+def say_hello(name):
     return "Hello, I am {}".format(name)
 
 say_hello(4)
 
-TypeError: Argument 1 of say_hallo is not str!
+TypeError: Argument 1 of say_hello is not str!
 ```
 
 ```python
 @accepts(str)
-def say_hallo(name):
+def say_hello(name):
     return "Hello, I am {}".format(name)
 
 say_hello("Hacker")
@@ -91,6 +91,6 @@ I am done!
 And the log file should look like this:
 
 ```
-get_low was called and took 2.00 seconds to compleat
-get_low was called and took 2.10 seconds to compleat
+get_low was called and took 2.00 seconds to complete
+get_low was called and took 2.10 seconds to complete
 ```
