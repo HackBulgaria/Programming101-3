@@ -65,3 +65,14 @@ Write a program that displays on the console each chapter. You can only move for
 
 Try not to load the whole book in the memory. Use generator!
 
+## Book Generator
+Make a python program that generates books.
+
+Your program should take the following parameters.
+
+- Chapters count
+- Chapter length range (in words)
+
+The words should be with random length and random char. The format of the book should be the same as previous task. The whole book must be in one file.
+
+Try to generate bigger book. Like 1-2G, and try to pass it to the previous program.
