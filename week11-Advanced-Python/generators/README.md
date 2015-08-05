@@ -53,15 +53,17 @@ for item in endless:
 ```
 
 ## Book Reader
-You have some text file. They represent a book. Our book contains chapters. Each chapter starts with ``#`` at the beginning of the line. (Markdown book)
+You have some text files. They represent a book. Our book contains chapters. Each chapter starts with ``#`` at the beginning of the line. (Markdown book)
 
-Our book is made of many files. Each file have its number ``001.txt, 002.txt, 003.txt``
+Our book is made of many files. Each file has its number ``001.txt, 002.txt, 003.txt``
 
-Each file may contains one or more chapters.
+Each file may contain one or more chapters.
 
 ``Link to the book``
 
+[Link to the book](Book.zip) has no title attribute.
+
 Write a program that displays on the console each chapter. You can only move forwards using the ``space button``.
 
-Try not to load the hole book in the memory. Use generator!
+Try not to load the whole book in the memory. Use generator!
 
