@@ -59,9 +59,7 @@ Our book is made of many files. Each file has its number ``001.txt, 002.txt, 003
 
 Each file may contain one or more chapters.
 
-``Link to the book``
-
-[Link to the book](Book.zip) has no title attribute.
+[Link to the book](Book.zip)
 
 Write a program that displays on the console each chapter. You can only move forwards using the ``space button``.
 
